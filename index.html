@@ -52,11 +52,13 @@
 		<div id="ci12-randContent"></div>
 	</div>
 	<div class="ci12-api">
-		<h4>Api</h4>
-		<p>在辞库达到一定量级之前，不开放任何接口。只开放源文件下载。本站所有辞句均可<a href="./12ci.json">点击此处下载</a><p id="ci12-log"></p></p>
+		<h4>说明</h4>
+		<p>1.本站地址：12.ci</p>
+		<p>在辞库达到一定量级之前，不开放任何接口。只开放源文件下载。本站所有辞句均可<a href="./12ci.json">点击此处下载</a></p>
+		<p id="ci12-log"></p>
 	</div>
 	<div class="footer">
-		特别声明：所有辞句均收集于网络和Leafrainy所阅读的出版物中，如若侵权，请及时联系，我方会在24小时内删除。
+		特别声明：所有辞句均收集于网络和Leafrainy所阅读的出版物中，如若侵权，请及时联系(lw.zhl@qq.com)，我方会在24小时内删除。
 		<p>CopyRight 12辞（12.ci） 2018</p>
 	</div>
 <script type="text/javascript">
@@ -75,7 +77,7 @@
 				var randNum = Math.floor( Math.random() * s.length );
 				//输出随机一辞
 				$("#ci12-randContent").html(s[randNum].content);
-				$("#ci12-log").html("当前辞库量："+maxNum+"     最后更新时间:"+s[s.length-1].time);
+				$("#ci12-log").html("当前辞库量："+maxNum+"<br/>最后更新时间:"+s[s.length-1].time);
 			},
 			error:function(e){
 				console.log(e);
