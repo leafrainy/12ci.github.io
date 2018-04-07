@@ -1,0 +1,90 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>12辞</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">  
+	<script type="text/javascript" src="./jquery.min.js"></script>	
+</head>
+<style type="text/css">
+	body{
+		width:400px;
+        margin:0 auto;
+        padding:10px;
+	}
+	#ci12-maxNum{
+		font-size: 12px;
+    	color: #696969;
+	}
+	#ci12-log{
+		font-size: 12px;
+    	color: #696969;
+	}
+	#ci12-randContent{
+		margin-top: 100px;
+		font-size: 20px;
+		text-align: center;
+	}
+	.ci12{
+		margin-bottom: 30px;
+	}
+	.ci12-api{
+		margin-top: 200px;
+
+	}
+	.ci12-api a{
+		text-decoration:none;
+	}
+	.footer{
+		position: fixed;
+		bottom: 0;
+		color:#696969;
+		font-size:12px;
+		width:400px;
+        margin:0 auto;
+	}
+	.footer p{
+		text-align: center;
+	}
+</style>
+<body>
+	<h1>12辞，因你而精彩</h1>
+
+	<div class="ci12">
+		<div id="ci12-randContent"></div>
+	</div>
+	<div class="ci12-api">
+		<h4>Api</h4>
+		<p>在辞库达到一定量级之前，不开放任何接口。只开放源文件下载。本站所有辞句均可<a href="./12ci.json">点击此处下载</a><p id="ci12-log"></p></p>
+	</div>
+	<div class="footer">
+		特别声明：所有辞句均收集于网络和Leafrainy所阅读的出版物中，如若侵权，请及时联系，我方会在24小时内删除。
+		<p>CopyRight 12辞（12.ci） 2018</p>
+	</div>
+<script type="text/javascript">
+	$(document).ready(function(){
+
+		console.info("12辞，因你而精彩");
+
+		$.ajax({
+			url:"12ci.json",
+			type:"GET",
+			dataType:"json",
+			success:function(s){
+				//辞库当前最大量
+				var maxNum = s.length;
+				//随机一个整数
+				var randNum = Math.floor( Math.random() * s.length );
+				//输出随机一辞
+				$("#ci12-randContent").html(s[randNum].content);
+				$("#ci12-log").html("当前辞库量："+maxNum+"     最后更新时间:"+s[s.length-1].time);
+			},
+			error:function(e){
+				console.log(e);
+			}
+
+		});
+	});
+</script>
+</body>
+</html>
