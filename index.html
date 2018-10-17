@@ -1,71 +1,81 @@
-<!DOCTYPE>
+<!DOCTYPE <html>
 <html>
-<head>
-	<meta charset="utf-8">
-	<title>12辞</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">  
-	<script type="text/javascript" src="./jquery.min.js"></script>	
-</head>
-<style type="text/css">
-	body{
-		width:350px;
-        	margin:0 auto;
-        	padding:10px;
-	}
-	#ci12-maxNum{
-		font-size: 12px;
-    		color: #696969;
-	}
-	#ci12-log{
-		font-size: 12px;
-    		color: #696969;
-	}
-	#ci12-randContent{
-		margin-top: 70px;
-		margin-bottom:70px;
-		font-size: 20px;
-		text-align: center;
-	}
-	.ci12{
-		margin-bottom: 30px;
-	}
-	.ci12-api a{
-		text-decoration:none;
-	}
-	.footer{
-		position: absolute;
-		bottom: 0;
-		color:#696969;
-		font-size:12px;
-		width:350px;
-        	margin:0 auto;
-		padding:5px;
-	}
-	.footer p{
-		text-align: center;
-	}
-</style>
-<body>
-	<h1>12辞，因你而精彩</h1>
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>12辞</title> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
+  <link rel="stylesheet" type="text/css" href="./bulma.min.css" /> 
+  <script type="text/javascript" src="./jquery.min.js"></script> 
+ </head> 
+ <body> 
+  <section class="hero is-primary is-fullheight"> 
+  <!--header start-->
+   <div class="hero-head"> 
+    <nav class="navbar"> 
+     <div class="container"> 
+      <div class="navbar-brand"> 
+       <span class="navbar-item"> </span> 
+       <span class="navbar-item is-size-3 has-text-white"> 十二辞 </span> 
+       <span class="navbar-burger burger" data-target="navbarMenuHeroA"> <span></span> <span></span> <span></span> </span> 
+      </div> 
+      <div id="navbarMenuHeroA" class="navbar-menu"> 
+       <div class="navbar-end"> 
+        <a class="navbar-item header"> Home </a> 
+        <a class="navbar-item about"> About </a> 
+        <span class="navbar-item"> </span> 
+       </div> 
+      </div> 
+     </div> 
+    </nav> 
+   </div> 
+  <!--header end-->
+  <!--body start-->
+   <div class="hero-body"> 
+    <div id="index"> 
+     <div class="container"> 
+      <div class="columns ">
+       <div class="column  is-offset-2 has-text-centered is-size-2"> 
+        <div id="ci12-randContent"></div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+    <div id="about"> 
+     <div class="container"> 
+      <div class="columns ">
+       <div class="column is-offset-2 has-text-justified is-size-5"> 
+        <div class="ci12-api"> 
+         <p id="ci12-log"></p> 
+         <h4>说明：</h4> 
+         <p>1.本站地址：http://12.ci</p> 
+         <p>2.在辞库达到一定量级之前，不开放任何接口。只开放源文件下载。本站所有辞句均可<a href="./12ci.json">【点击此处下载】</a></p> 
+         <p>3.特别声明：所有辞句均收集于网络和Leafrainy所阅读的出版物中，如若侵权，请及时联系(lw.zhl@qq.com)，我方会在24小时内删除。</p> 
+        </div> 
+       </div> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!--body end-->
+   <!--footer start-->
+   <div class="hero-footer"> 
+    <div class="container"> 
+     <div class="columns ">
+      <div class="column  has-text-centered is-size-7"> 
+       <p>CopyRight 12辞（12.ci）by Leafrainy 2018</p> 
+      </div> 
+     </div> 
+    </div> 
+   </div> 
+   <!--footer end-->
 
-	<div class="ci12">
-		<div id="ci12-randContent"></div>
-	</div>
-	<div class="ci12-api">
-		<h4>说明</h4>
-		<p>1.本站地址：12.ci</p>
-		<p>2.在辞库达到一定量级之前，不开放任何接口。只开放源文件下载。本站所有辞句均可<a href="./12ci.json">点击此处下载</a></p>
-		<p id="ci12-log"></p>
-	</div>
-	<div class="footer">
-		特别声明：所有辞句均收集于网络和Leafrainy所阅读的出版物中，如若侵权，请及时联系(lw.zhl@qq.com)，我方会在24小时内删除。
-		<p>CopyRight 12辞（12.ci） 2018</p>
-	</div>
-<script type="text/javascript">
+  </section> 
+  <script type="text/javascript">
 	$(document).ready(function(){
 
 		console.info("12辞，因你而精彩");
-
+		$("#index").show();
+		$("#about").hide();
 		$.ajax({
 			url:"12ci.json",
 			type:"GET",
@@ -84,7 +94,17 @@
 			}
 
 		});
+		//点击关于
+		$(".about").click(function(){
+			$("#about").show();
+			$("#index").hide();
+		});
+		//点击标题
+		$(".header").click(function(){
+			$("#index").show();
+			$("#about").hide();
+		});
 	});
-</script>
-</body>
+</script>   
+ </body>
 </html>
