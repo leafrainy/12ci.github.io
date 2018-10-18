@@ -1,76 +1,85 @@
 <!DOCTYPE <html>
 <html>
- <head> 
+<head> 
   <meta charset="utf-8" /> 
   <title>12辞</title> 
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" /> 
   <link rel="stylesheet" type="text/css" href="./bulma.min.css" /> 
   <script type="text/javascript" src="./jquery.min.js"></script> 
- </head> 
- <body> 
-  <section class="hero is-primary is-fullheight"> 
+</head> 
+<body> 
+ <section class="hero is-primary is-large">
   <!--header start-->
-   <div class="hero-head"> 
-    <nav class="navbar"> 
-     <div class="container"> 
-      <div class="navbar-brand"> 
-       <span class="navbar-item"> </span> 
-       <span class="navbar-item is-size-3 has-text-white"> 十二辞 </span> 
-       <span class="navbar-burger burger" data-target="navbarMenuHeroA"> <span></span> <span></span> <span></span> </span> 
-      </div> 
-      <div id="navbarMenuHeroA" class="navbar-menu"> 
-       <div class="navbar-end"> 
-        <a class="navbar-item header"> Home </a> 
-        <a class="navbar-item about"> About </a> 
-        <span class="navbar-item"> </span> 
-       </div> 
-      </div> 
-     </div> 
-    </nav> 
-   </div> 
+  <div class="hero-head">
+    <nav class="navbar">
+      <div class="container">
+        <div class="navbar-brand">
+          <span class="navbar-item"> </span> 
+          <span class="navbar-item is-size-3 has-text-white header"> 十二辞 </span>
+          <span class="navbar-burger burger" data-target="navbarMenuHeroA">
+            <span></span>
+            <span></span>
+            <span></span>
+          </span>
+        </div>
+        <div id="navbarMenuHeroA" class="navbar-menu">
+          <div class="navbar-end">
+            <a class="navbar-item header">
+              Home
+            </a>
+            <a class="navbar-item about">
+              About
+            </a>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
   <!--header end-->
   <!--body start-->
-   <div class="hero-body"> 
-    <div id="index"> 
-     <div class="container"> 
-      <div class="columns ">
-       <div class="column  is-offset-2 has-text-centered is-size-2"> 
-        <div id="ci12-randContent"></div> 
-       </div> 
-      </div> 
-     </div> 
-    </div> 
+  <div class="hero-body">
+
+    <div id="index" > 
+      <div class="container has-text-centered">
+        <h1 class="title">
+          <div id="ci12-randContent"></div>
+          
+          
+        </h1>
+      </div>
+    </div>
+
     <div id="about"> 
      <div class="container"> 
       <div class="columns ">
-       <div class="column is-offset-2 has-text-justified is-size-5"> 
+       <div class="column  is-size-5"> 
         <div class="ci12-api"> 
          <p id="ci12-log"></p> 
          <h4>说明：</h4> 
          <p>1.本站地址：http://12.ci</p> 
          <p>2.在辞库达到一定量级之前，不开放任何接口。只开放源文件下载。本站所有辞句均可<a href="./12ci.json">【点击此处下载】</a></p> 
          <p>3.特别声明：所有辞句均收集于网络和Leafrainy所阅读的出版物中，如若侵权，请及时联系(lw.zhl@qq.com)，我方会在24小时内删除。</p> 
-        </div> 
        </div> 
-      </div> 
      </div> 
-    </div> 
    </div> 
-   <!--body end-->
-   <!--footer start-->
-   <div class="hero-footer"> 
-    <div class="container"> 
-     <div class="columns ">
-      <div class="column  has-text-centered is-size-7"> 
-       <p>CopyRight 12辞（12.ci）by Leafrainy 2018</p> 
-      </div> 
-     </div> 
-    </div> 
-   </div> 
-   <!--footer end-->
+ </div> 
+</div>
+</div>
 
-  </section> 
-  <script type="text/javascript">
+<!--body end-->
+<!--footer start-->
+<div class="hero-foot">
+  <div class="has-text-centered is-size-7"> 
+    <p> &nbsp;</p> <p> &nbsp;</p><p> &nbsp;</p><p> &nbsp;</p><p> &nbsp;</p><p> &nbsp;</p>
+    <p>CopyRight 12辞（12.ci）by Leafrainy 2018</p> 
+
+  </div> 
+</div>
+<!--footer end-->
+</section> 
+<script type="text/javascript">
 	$(document).ready(function(){
 
 		console.info("12辞，因你而精彩");
@@ -106,5 +115,5 @@
 		});
 	});
 </script>   
- </body>
+</body>
 </html>
